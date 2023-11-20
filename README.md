@@ -63,7 +63,7 @@ Seleccionar la opcion correspondiente al sistema operativo a ejecutar.
 ## Diagrama de despliegue 📦
 El diagrama de despliegue muestra la arquitectura de una aplicación móvil desarrollada en Flutter, la cual se ejecuta en un dispositivo Android con sistema operativo Android 11. En el lado del servidor web, se empleará Replit Server, que utiliza Node.js y hace uso de la base de datos SQLite3. Finalmente, la aplicación se conecta al servidor backend de Firebase mediante protocolos HTTP y WebSockets.
 
-![No se pudo cargar la imagen](images)
+![No se pudo cargar la imagen](src/images/despliegue.png)
 
 
 
@@ -71,24 +71,53 @@ El diagrama de despliegue muestra la arquitectura de una aplicación móvil desa
 
 Los requerimientos están relacionados con el diagrama de despliegue
 
-_Cursiva_
-
+```
+Cada día se debe realizar un respaldo de la base de datos.
+- El servidor Firebase constantememente debe reportar a detalle los errores que puedan haber causado que se caiga la aplicación.
+- El administrador es el único que puede cambiar los datos de la base o usuarios.
+- El servidor Replit tiene que estar activa las 24 horas del día para que los usuarios puedan acceder.
+- El tiempo de respuesta de la aplicación debe ser menor a un segundo.
+- La aplicación debe ser compatible con todos los celulares Android distribuidos actualmente.
+```
 ## Diagrama de casos de uso 📋
 
-Diagrama elaborado relacionado correctamente a los
-requisitos funcionales.
+Diagrama elaborado relacionado correctamente a los requisitos funcionales.
+![No se pudo cargar la imagen](src/images/casodeuso.png)
 
-_Cursiva_
 
 ```
-Da un ejemplo
+REQUERIMIENTOS FUNCIONALES
+1. Acceder al Sistema:
+El sistema debe permitir a los usuarios iniciar sesión de manera segura.
+Se deben autenticar los usuarios mediante credenciales válidas.
+2. Cambiar Contraseña:
+Los usuarios deben tener la capacidad de cambiar su contraseña de forma segura.
+Se deben seguir prácticas de seguridad, como la verificación de la identidad antes de permitir cambios de contraseña.
+3. Crear Cuenta:
+El sistema debe proporcionar la opción de crear una cuenta nueva.
+Durante el proceso de creación de cuenta, se debe incluir la aceptación de términos y condiciones.
+4. Mostrar Rutina:
+La aplicación debe permitir a los alumnos ver sus rutinas de entrenamiento.
+Se debe implementar la capacidad de filtrar ejercicios dentro de las rutinas.
+Debe ser posible ver información detallada sobre un ejercicio específico dentro de la rutina.
+5. Mostrar Ejercicios:
+Los alumnos deben poder acceder a una lista de ejercicios disponibles.
+La aplicación debe proporcionar opciones para filtrar los ejercicios según diferentes criterios.
+Se debe permitir ver información detallada sobre un ejercicio específico.
+6. Compartir en Redes Sociales:
+Los alumnos deben tener la opción de compartir su progreso o logros en las redes sociales.
+Se deben proporcionar enlaces o integraciones para facilitar el proceso de compartir.
+7. Mostrar Integrantes:
+La aplicación debe permitir a los alumnos ver información sobre otros miembros del gimnasio.
+Se deben incluir funciones para buscar y visualizar perfiles de otros usuarios.
+8. Actualizar Perfil:
+Los alumnos deben poder actualizar la información de su perfil.
+La aplicación debe permitir cambios en la información personal, como la foto de perfil, la información de contacto, etc.
 ```
 
 ### Descripción de casos de uso 
 Las descripciones están relacionadas correctamente a los
 requisitos funcionales y los mockups
-
-_Cursiva_
 
 
 ## Construido con 🛠️
